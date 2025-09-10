@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1757472239846,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "untreatable",
+    "confidence": 0.7970658320836254,
+    "imagePath": "C:\\Users\\SOURAMOY\\OneDrive - SS Production\\Desktop\\project\\backend\\uploads\\general\\1757472239734-575059058.png",
+    "notes": "",
+    "timestamp": "2025-09-10T02:43:59.846Z",
+    "reviewed": false
+  },
+  {
+    "id": 1757472490975,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "healthy",
+    "confidence": 0.6002622154250848,
+    "imagePath": "C:\\Users\\SOURAMOY\\OneDrive - SS Production\\Desktop\\project\\backend\\uploads\\general\\1757472490930-45403902.jpg",
+    "notes": "",
+    "timestamp": "2025-09-10T02:48:10.975Z",
+    "reviewed": false
+  },
+  {
+    "id": 1757472523754,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "healthy",
+    "confidence": 0.9898251302899909,
+    "imagePath": "C:\\Users\\SOURAMOY\\OneDrive - SS Production\\Desktop\\project\\backend\\uploads\\general\\1757472523716-375009180.jpg",
+    "notes": "",
+    "timestamp": "2025-09-10T02:48:43.754Z",
+    "reviewed": false
+  },
+  {
+    "id": 1757478126574,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "treatable",
+    "confidence": 0.8903057135839825,
+    "imagePath": "C:\\Users\\SOURAMOY\\OneDrive - SS Production\\Desktop\\project\\backend\\uploads\\general\\1757478126459-191082632.jpg",
+    "notes": "",
+    "timestamp": "2025-09-10T04:22:06.574Z",
+    "reviewed": false
+  },
+  {
+    "id": 1757478239373,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "untreatable",
+    "confidence": 0.9368553682746004,
+    "imagePath": "C:\\Users\\SOURAMOY\\OneDrive - SS Production\\Desktop\\project\\backend\\uploads\\general\\1757478239244-149743645.jpg",
+    "notes": "",
+    "timestamp": "2025-09-10T04:23:59.373Z",
+    "reviewed": false
+  },
+  {
+    "id": 1757478311879,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "healthy",
+    "confidence": 0.89814215186991,
+    "imagePath": "C:\\Users\\SOURAMOY\\OneDrive - SS Production\\Desktop\\project\\backend\\uploads\\general\\1757478311766-721246918.jpg",
+    "notes": "",
+    "timestamp": "2025-09-10T04:25:11.879Z",
+    "reviewed": false
+  },
+  {
+    "id": 1757490766692,
+    "userId": 1757472181925,
+    "animalId": "chicken 10",
+    "result": "treatable",
+    "confidence": 0.918058537971165,
+    "imagePath": "C:\\Users\\SOURAMOY\\OneDrive - SS Production\\Desktop\\project\\backend\\uploads\\general\\1757490766507-579703874.jpg",
+    "notes": "why it is laying ",
+    "timestamp": "2025-09-10T07:52:46.692Z",
+    "reviewed": false
+  },
+  {
+    "id": 1757490782541,
+    "userId": 1757472181925,
+    "animalId": "chicken 10",
+    "result": "healthy",
+    "confidence": 0.9212559552345907,
+    "imagePath": "C:\\Users\\SOURAMOY\\OneDrive - SS Production\\Desktop\\project\\backend\\uploads\\general\\1757490782482-464261823.jpg",
+    "notes": "why it is laying ",
+    "timestamp": "2025-09-10T07:53:02.541Z",
+    "reviewed": false
+  },
+  {
+    "id": 1757490786617,
+    "userId": 1757472181925,
+    "animalId": "chicken 10",
+    "result": "treatable",
+    "confidence": 0.9693561253127206,
+    "imagePath": "C:\\Users\\SOURAMOY\\OneDrive - SS Production\\Desktop\\project\\backend\\uploads\\general\\1757490786560-816476382.jpg",
+    "notes": "why it is laying ",
+    "timestamp": "2025-09-10T07:53:06.617Z",
+    "reviewed": false
+  },
+  {
+    "id": 1757490815079,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "healthy",
+    "confidence": 0.7303754996033422,
+    "imagePath": "C:\\Users\\SOURAMOY\\OneDrive - SS Production\\Desktop\\project\\backend\\uploads\\general\\1757490814997-213303839.jpg",
+    "notes": "",
+    "timestamp": "2025-09-10T07:53:35.079Z",
+    "reviewed": false
+  }
+]

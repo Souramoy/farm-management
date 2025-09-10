@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1757472181925,
+    "username": "Souramoy",
+    "email": "souramoys@gmail.com",
+    "password_hash": "$2b$10$J02LbuKCll7fRAc4TFUFJ.ZChALieZjLQF8OHtiDPnsFybm8LaTfy",
+    "role": "farmer",
+    "farmName": "hellofarm",
+    "createdAt": "2025-09-10T02:43:01.925Z",
+    "isActive": true
+  },
+  {
+    "id": 1757472338255,
+    "username": "admin",
+    "email": "admin@123",
+    "password_hash": "$2b$10$uy.pXnf5.sa1ciUywgpmeuqQen/ePKzTfl4d06k5RxLCYYQq9vUhm",
+    "role": "admin",
+    "farmName": "admin",
+    "createdAt": "2025-09-10T02:45:38.255Z",
+    "isActive": true
+  },
+  {
+    "id": 1757492912028,
+    "username": "Laura",
+    "email": "laura@bal.com",
+    "password_hash": "$2b$10$JY2LsZusp1s71gIKxEujne4X.rjMvjN2Pb2GOUZiOj/a30mHMRN/m",
+    "role": "farmer",
+    "farmName": "BalerFarm",
+    "createdAt": "2025-09-10T08:28:32.028Z",
+    "isActive": true
+  }
+]

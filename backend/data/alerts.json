@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1757472239847,
+    "userId": 1757472181925,
+    "type": "health_alert",
+    "title": "Animal Health Alert - untreatable",
+    "message": "Scan detected untreatable condition (80% confidence)",
+    "priority": "high",
+    "timestamp": "2025-09-10T02:43:59.847Z",
+    "read": true
+  },
+  {
+    "id": 1757478126578,
+    "userId": 1757472181925,
+    "type": "health_alert",
+    "title": "Animal Health Alert - treatable",
+    "message": "Scan detected treatable condition (89% confidence)",
+    "priority": "medium",
+    "timestamp": "2025-09-10T04:22:06.578Z",
+    "read": true
+  },
+  {
+    "id": 1757478239377,
+    "userId": 1757472181925,
+    "type": "health_alert",
+    "title": "Animal Health Alert - untreatable",
+    "message": "Scan detected untreatable condition (94% confidence)",
+    "priority": "high",
+    "timestamp": "2025-09-10T04:23:59.377Z",
+    "read": true
+  },
+  {
+    "id": 1757490766695,
+    "userId": 1757472181925,
+    "type": "health_alert",
+    "title": "Animal Health Alert - treatable",
+    "message": "Scan detected treatable condition (92% confidence)",
+    "priority": "medium",
+    "timestamp": "2025-09-10T07:52:46.695Z",
+    "read": false
+  },
+  {
+    "id": 1757490786619,
+    "userId": 1757472181925,
+    "type": "health_alert",
+    "title": "Animal Health Alert - treatable",
+    "message": "Scan detected treatable condition (97% confidence)",
+    "priority": "medium",
+    "timestamp": "2025-09-10T07:53:06.619Z",
+    "read": false
+  }
+]
