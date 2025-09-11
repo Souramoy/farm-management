@@ -33,7 +33,7 @@ export default function RootLayout({
       >
         <Providers>
           {children}
-          <footer className="text-center py-6 text-gray-400">
+          <footer className="text-center py-6 text-gray-400 bg-slate-950">
             © {new Date().getFullYear()} Spektr. All rights reserved.
           </footer>
         </Providers>

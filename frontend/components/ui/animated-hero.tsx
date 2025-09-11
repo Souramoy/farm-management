@@ -74,7 +74,7 @@ function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-row gap-3">
             <Button size="lg" className="gap-4 text-black" variant="outline">
-              Jump on a call <PhoneCall className="w-4 h-4" />
+              Call for veterinary support <PhoneCall className="w-4 h-4" />
             </Button>
             <Link href="/login">
               <Button size="lg" className="gap-4">

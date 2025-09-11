@@ -1,12 +1,12 @@
-import { GalleryVerticalEnd } from "lucide-react"
+import { GalleryVerticalEnd } from "lucide-react";
 
-import { LoginForm } from "@/components/login-form"
-import { SignUpForm } from "@/components/signup-form"
+import { LoginForm } from "@/components/login-form";
+import { SignUpForm } from "@/components/signup-form";
 
 export default function LoginPage() {
   return (
     <div className="grid min-h-svh lg:grid-cols-2">
-        <div className="bg-muted relative hidden lg:block">
+      <div className="bg-muted relative hidden lg:block">
         <img
           src="https://images.pexels.com/photos/5848486/pexels-photo-5848486.jpeg"
           alt="Image"
@@ -19,7 +19,7 @@ export default function LoginPage() {
             <div className="bg-primary text-primary-foreground flex size-6 items-center justify-center rounded-md">
               <GalleryVerticalEnd className="size-4" />
             </div>
-            Farm Company
+            Spektr
           </a>
         </div>
         <div className="flex flex-1 items-center justify-center">
@@ -28,7 +28,6 @@ export default function LoginPage() {
           </div>
         </div>
       </div>
-      
     </div>
-  )
+  );
 }

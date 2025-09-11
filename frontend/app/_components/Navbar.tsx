@@ -3,10 +3,17 @@ import { useState } from "react";
 import { Menu, X, LogIn, LogOut } from "lucide-react";
 import Link from "next/link";
 import { useAuth } from "@/contexts/AuthContext";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { user, logout } = useAuth();
+  const router = useRouter();
+
+  const handleLogout = () => {
+    logout();
+    router.push("/login");
+  };
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50">
@@ -59,7 +66,7 @@ export default function Navbar() {
               {/* Auth Buttons */}
               {user ? (
                 <button
-                  onClick={logout}
+                  onClick={handleLogout}
                   className="flex items-center gap-2 bg-red-500/20 px-4 py-2 rounded-lg border border-red-500/30 text-red-300 font-semibold hover:bg-red-500/30 transition"
                 >
                   <LogOut className="w-4 h-4" />
@@ -122,7 +129,7 @@ export default function Navbar() {
           {user ? (
             <button
               onClick={() => {
-                logout();
+                handleLogout();
                 setIsOpen(false);
               }}
               className="w-full flex items-center justify-center gap-2 bg-red-500/20 px-4 py-2 rounded-lg border border-red-500/30 text-red-300 font-semibold hover:bg-red-500/30 transition"

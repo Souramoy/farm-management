@@ -14,6 +14,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { useNotification } from "@/contexts/NotificationContext";
 import axios from "axios";
 import Navbar from "@/app/_components/Navbar";
+import { useRouter } from "next/navigation";
 
 interface DashboardStats {
   totalScans: number;
@@ -28,7 +29,12 @@ const Dashboard: React.FC = () => {
   const { addNotification } = useNotification();
   const [stats, setStats] = useState<DashboardStats | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-
+  const router = useRouter();
+  useEffect(() => {
+    if (user?.role === "admin") {
+      router.push("/adminDashboard");
+    }
+  }, [user, router]);
   useEffect(() => {
     loadDashboardStats();
   }, []);

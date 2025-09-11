@@ -1,13 +1,13 @@
-"use client"
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+"use client";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { useAuth } from "@/contexts/AuthContext";
 import { useNotification } from "@/contexts/NotificationContext";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link"
+import Link from "next/link";
 
 export function LoginForm({
   className,
@@ -29,24 +29,28 @@ export function LoginForm({
       console.log("Logging in with:", { username, password });
       await login(username, password);
       addNotification({
-        type: 'success',
-        title: 'Welcome back!',
-        message: 'Successfully logged in'
+        type: "success",
+        title: "Welcome back!",
+        message: "Successfully logged in",
       });
       // Redirect to dashboard after successful login
-      router.push('/dashboard');
+      router.push("/dashboard");
     } catch (error: any) {
       addNotification({
-        type: 'error',
-        title: 'Login failed',
-        message: error.message || 'Invalid credentials'
+        type: "error",
+        title: "Login failed",
+        message: error.message || "Invalid credentials",
       });
     } finally {
       setIsLoading(false);
     }
   };
   return (
-    <form className={cn("flex flex-col gap-6", className)} onSubmit={handleSubmit} {...props}>
+    <form
+      className={cn("flex flex-col gap-6", className)}
+      onSubmit={handleSubmit}
+      {...props}
+    >
       <div className="flex flex-col items-center gap-2 text-center">
         <h1 className="text-2xl font-bold">Login to your account</h1>
         <p className="text-muted-foreground text-sm text-balance">
@@ -56,13 +60,13 @@ export function LoginForm({
       <div className="grid gap-6">
         <div className="grid gap-3">
           <Label htmlFor="username">Username</Label>
-          <Input 
-            id="username" 
-            type="text" 
-            placeholder="John Doe" 
+          <Input
+            id="username"
+            type="text"
+            placeholder="John Doe"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            required 
+            required
           />
         </div>
         <div className="grid gap-3">
@@ -75,16 +79,16 @@ export function LoginForm({
               Forgot your password?
             </a> */}
           </div>
-          <Input 
-            id="password" 
-            type="password" 
+          <Input
+            id="password"
+            type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required 
+            required
           />
         </div>
         <Button type="submit" className="w-full" disabled={isLoading}>
-          {isLoading ? 'Logging in...' : 'Login'}
+          {isLoading ? "Logging in..." : "Login"}
         </Button>
         {/* <div className="after:border-border relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t">
           <span className="bg-background text-muted-foreground relative z-10 px-2">
@@ -108,5 +112,5 @@ export function LoginForm({
         </Link>
       </div>
     </form>
-  )
+  );
 }
