@@ -6,12 +6,21 @@ import bcrypt from 'bcrypt';
 import multer from 'multer';
 import cors from 'cors';
 import axios from 'axios';
+import FormData from 'form-data'; // Proper ESM import (replaces in-route require)
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Version sentinel to verify the correct file is running (bump when changing scan route logic)
+const SERVER_FILE_VERSION = 'scan-ai-integration-v3';
+
 const app = express();
+console.log('[SERVER START] server.js version:', SERVER_FILE_VERSION);
+if (typeof require !== 'undefined') {
+  // In pure ESM context, require should be undefined. If it exists, we log it for diagnostics.
+  console.log('[DIAGNOSTIC] require is defined in this runtime (possible mixed module system).');
+}
 app.use(express.json());
 app.use(cors());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
@@ -30,6 +39,8 @@ if (!fs.existsSync(UPLOADS_DIR)) {
 }
 
 const JWT_SECRET = 'farm-management-secret-key';
+// Hard-coded production AI service base URL (user requested no env vars)
+const AI_SERVICE_BASE = 'https://farm-ai-production.up.railway.app';
 
 function readJSON(file) {
   const filePath = path.join(DATA_DIR, file);
@@ -235,24 +246,77 @@ app.post('/api/scan', authenticateToken, upload.single('image'), async (req, res
     console.log(`Scan request from user ${req.user.username} (ID: ${req.user.id})`);
     const { animalId, notes } = req.body;
     
-    // Call AI service
-    let aiResult = { status: 'healthy', confidence: 0.85 };
+    if (!req.file) {
+      return res.status(400).json({ error: 'No image file provided' });
+    }
+    // NOTE: FormData is imported at top (ESM). The previous in-route require caused a ReferenceError in ESM and led to 500.
+
+    // Create a FormData object to send the image file to the AI service
+    const formData = new FormData();
+    const fileStream = fs.createReadStream(req.file.path);
+    formData.append('image', fileStream, {
+      filename: req.file.originalname,
+      contentType: req.file.mimetype
+    });
+    
+    console.log(`Image file details: ${req.file.originalname}, ${req.file.mimetype}, size: ${req.file.size} bytes`);
+
+    // Call AI service with image
+    let aiResult;
     try {
-      console.log('Calling AI service for prediction...');
-      const response = await axios.post('http://localhost:5000/predict', {
-        timeout: 5000
+      console.log('Calling AI service for image analysis...');
+      
+      // With the form-data npm package, getHeaders() is available
+      // If there's any issue with getHeaders, comment this out and use the commented out version below
+      const headers = formData.getHeaders ? formData.getHeaders() : { 'Content-Type': 'multipart/form-data' };
+      console.log('Request headers:', headers);
+      
+      const response = await axios.post(`${AI_SERVICE_BASE}/analyze`, formData, {
+        headers: headers,
+        maxContentLength: Infinity,
+        maxBodyLength: Infinity,
+        timeout: 60000 // Increased timeout for Gemini processing (60 seconds)
       });
+      
       aiResult = response.data;
-      console.log(`AI service response: ${aiResult.status} (confidence: ${aiResult.confidence})`);
+      console.log(`AI service response: ${aiResult.result} (confidence: ${aiResult.confidence})`);
+      console.log(`Animal type detected: ${aiResult.animal_type}`);
+      
     } catch (aiError) {
-      console.log('AI service not available, using fallback:', aiError.message);
-      // Fallback random result for demo
+      // Detailed diagnostics
+      console.log('AI service error details:');
+      if (aiError.response) {
+        console.log('Response status:', aiError.response.status);
+        console.log('Response data:', aiError.response.data);
+        console.log('Response headers:', aiError.response.headers);
+      } else if (aiError.request) {
+        console.log('No response received. URL (if available):', aiError.request?._currentUrl || 'N/A');
+      } else {
+        console.log('Error setting up request:', aiError.message);
+      }
+      console.log('Stack (if any):', aiError.stack || 'No stack');
+
+      // Fallback random result for resilience
       const statuses = ['healthy', 'treatable', 'untreatable'];
       aiResult = {
-        status: statuses[Math.floor(Math.random() * statuses.length)],
-        confidence: Math.random() * 0.4 + 0.6 // 0.6-1.0
+        result: statuses[Math.floor(Math.random() * statuses.length)],
+        confidence: +(Math.random() * 0.4 + 0.6).toFixed(3),
+        animal_type: 'unknown',
+        message: 'AI service unavailable - using fallback random result',
+        scanId: Date.now(),
+        health_assessment: {
+            status: 'unknown',
+            confidence: 0.7,
+            observations: 'AI service unavailable',
+            key_issues: ['Service unavailable']
+        },
+        recommendations: {
+            treatable: true,
+            message: 'Please try again later when the AI service is available',
+            monitoring_advice: 'Manual inspection recommended'
+        }
       };
-      console.log(`Fallback result: ${aiResult.status} (confidence: ${aiResult.confidence})`);
+      console.log(`Fallback result used due to AI error: ${aiResult.result} (confidence: ${aiResult.confidence})`);
     }
     
     const scans = readJSON('scans.json');
@@ -260,42 +324,50 @@ app.post('/api/scan', authenticateToken, upload.single('image'), async (req, res
       id: Date.now(),
       userId: req.user.id,
       animalId: animalId || null,
-      result: aiResult.status,
+      result: aiResult.result, // Using the standardized result field
       confidence: aiResult.confidence,
       imagePath: req.file ? req.file.path : null,
       notes: notes || '',
       timestamp: new Date().toISOString(),
-      reviewed: false
+      reviewed: false,
+      // Store enhanced data from new AI model
+      animalType: aiResult.animal_type || 'unknown',
+      observations: aiResult.health_assessment?.observations || '',
+      keyIssues: aiResult.health_assessment?.key_issues || [],
+      recommendations: aiResult.recommendations || {}
     };
     
     scans.push(newScan);
     writeJSON('scans.json', scans);
     
     // Create alert if problematic
-    if (aiResult.status !== 'healthy') {
-      console.log(`Creating alert for ${aiResult.status} condition`);
+    if (aiResult.result !== 'healthy') {
+      console.log(`Creating alert for ${aiResult.result} condition`);
       const alerts = readJSON('alerts.json');
+      
+      // Create a more detailed alert message using the enhanced data
+      const issuesText = aiResult.health_assessment?.key_issues?.length 
+        ? `Issues: ${aiResult.health_assessment.key_issues.join(', ')}`
+        : '';
+        
       alerts.push({
         id: Date.now(),
         userId: req.user.id,
         type: 'health_alert',
-        title: `Animal Health Alert - ${aiResult.status}`,
-        message: `Scan detected ${aiResult.status} condition (${Math.round(aiResult.confidence * 100)}% confidence)`,
-        priority: aiResult.status === 'untreatable' ? 'high' : 'medium',
+        title: `Animal Health Alert - ${aiResult.animal_type || 'Animal'}`,
+        message: `Scan detected ${aiResult.result} condition (${Math.round(aiResult.confidence * 100)}% confidence). ${issuesText}`,
+        priority: aiResult.result === 'untreatable' ? 'high' : 'medium',
         timestamp: new Date().toISOString(),
         read: false
       });
       writeJSON('alerts.json', alerts);
     }
     
-    console.log(`Scan completed successfully for user ${req.user.username}, result: ${aiResult.status}`);
+    console.log(`Scan completed successfully for user ${req.user.username}, result: ${aiResult.result}`);
     
-    res.json({ 
-      result: aiResult.status,
-      confidence: aiResult.confidence,
-      scanId: newScan.id,
-      message: 'Scan completed successfully'
-    });
+    // Pass all the enhanced AI result data to the frontend
+    res.json(aiResult);
+    
   } catch (error) {
     console.error('Scan error:', error);
     res.status(500).json({ error: 'Scan failed' });

@@ -37,7 +37,7 @@
     "message": "Scan detected treatable condition (92% confidence)",
     "priority": "medium",
     "timestamp": "2025-09-10T07:52:46.695Z",
-    "read": false
+    "read": true
   },
   {
     "id": 1757490786619,
@@ -47,7 +47,7 @@
     "message": "Scan detected treatable condition (97% confidence)",
     "priority": "medium",
     "timestamp": "2025-09-10T07:53:06.619Z",
-    "read": false
+    "read": true
   },
   {
     "id": 1757567876611,
@@ -57,6 +57,156 @@
     "message": "Scan detected treatable condition (61% confidence)",
     "priority": "medium",
     "timestamp": "2025-09-11T05:17:56.611Z",
+    "read": true
+  },
+  {
+    "id": 1757695807117,
+    "userId": 1757472181925,
+    "type": "health_alert",
+    "title": "Animal Health Alert - treatable",
+    "message": "Scan detected treatable condition (88% confidence)",
+    "priority": "medium",
+    "timestamp": "2025-09-12T16:50:07.117Z",
+    "read": true
+  },
+  {
+    "id": 1757696769760,
+    "userId": 1757472181925,
+    "type": "health_alert",
+    "title": "Animal Health Alert - unknown",
+    "message": "Scan detected treatable condition (74% confidence). Issues: Service unavailable",
+    "priority": "medium",
+    "timestamp": "2025-09-12T17:06:09.760Z",
+    "read": true
+  },
+  {
+    "id": 1757696771143,
+    "userId": 1757472181925,
+    "type": "health_alert",
+    "title": "Animal Health Alert - unknown",
+    "message": "Scan detected untreatable condition (75% confidence). Issues: Service unavailable",
+    "priority": "high",
+    "timestamp": "2025-09-12T17:06:11.143Z",
+    "read": true
+  },
+  {
+    "id": 1757696775734,
+    "userId": 1757472181925,
+    "type": "health_alert",
+    "title": "Animal Health Alert - unknown",
+    "message": "Scan detected treatable condition (85% confidence). Issues: Service unavailable",
+    "priority": "medium",
+    "timestamp": "2025-09-12T17:06:15.734Z",
+    "read": true
+  },
+  {
+    "id": 1757697327993,
+    "userId": 1757472181925,
+    "type": "health_alert",
+    "title": "Animal Health Alert - unknown",
+    "message": "Scan detected treatable condition (80% confidence). Issues: Service unavailable",
+    "priority": "medium",
+    "timestamp": "2025-09-12T17:15:27.993Z",
+    "read": true
+  },
+  {
+    "id": 1757697733238,
+    "userId": 1757472181925,
+    "type": "health_alert",
+    "title": "Animal Health Alert - unknown",
+    "message": "Scan detected untreatable condition (95% confidence). Issues: Service unavailable",
+    "priority": "high",
+    "timestamp": "2025-09-12T17:22:13.238Z",
+    "read": false
+  },
+  {
+    "id": 1757697735484,
+    "userId": 1757472181925,
+    "type": "health_alert",
+    "title": "Animal Health Alert - unknown",
+    "message": "Scan detected untreatable condition (91% confidence). Issues: Service unavailable",
+    "priority": "high",
+    "timestamp": "2025-09-12T17:22:15.484Z",
+    "read": false
+  },
+  {
+    "id": 1757697818836,
+    "userId": 1757472181925,
+    "type": "health_alert",
+    "title": "Animal Health Alert - unknown",
+    "message": "Scan detected untreatable condition (95% confidence). Issues: Service unavailable",
+    "priority": "high",
+    "timestamp": "2025-09-12T17:23:38.836Z",
+    "read": false
+  },
+  {
+    "id": 1757698897158,
+    "userId": 1757472181925,
+    "type": "health_alert",
+    "title": "Animal Health Alert - chicken",
+    "message": "Scan detected treatable condition (75% confidence). Issues: feather loss, possible underweight",
+    "priority": "medium",
+    "timestamp": "2025-09-12T17:41:37.158Z",
+    "read": false
+  },
+  {
+    "id": 1757698968668,
+    "userId": 1757472181925,
+    "type": "health_alert",
+    "title": "Animal Health Alert - cow",
+    "message": "Scan detected treatable condition (0% confidence). ",
+    "priority": "medium",
+    "timestamp": "2025-09-12T17:42:48.668Z",
+    "read": false
+  },
+  {
+    "id": 1757699071850,
+    "userId": 1757472181925,
+    "type": "health_alert",
+    "title": "Animal Health Alert - cow",
+    "message": "Scan detected treatable condition (0% confidence). ",
+    "priority": "medium",
+    "timestamp": "2025-09-12T17:44:31.850Z",
+    "read": false
+  },
+  {
+    "id": 1757699250486,
+    "userId": 1757472181925,
+    "type": "health_alert",
+    "title": "Animal Health Alert - cow",
+    "message": "Scan detected treatable condition (0% confidence). ",
+    "priority": "medium",
+    "timestamp": "2025-09-12T17:47:30.486Z",
+    "read": false
+  },
+  {
+    "id": 1757699283787,
+    "userId": 1757472181925,
+    "type": "health_alert",
+    "title": "Animal Health Alert - pig",
+    "message": "Scan detected untreatable condition (100% confidence). Issues: fatal injury",
+    "priority": "high",
+    "timestamp": "2025-09-12T17:48:03.787Z",
+    "read": false
+  },
+  {
+    "id": 1757699427489,
+    "userId": 1757472181925,
+    "type": "health_alert",
+    "title": "Animal Health Alert - chicken",
+    "message": "Scan detected untreatable condition (95% confidence). Issues: inability to stand, feather loss, possible skin inflammation, weakness/emaciation, possible neurological issue",
+    "priority": "high",
+    "timestamp": "2025-09-12T17:50:27.489Z",
+    "read": false
+  },
+  {
+    "id": 1757699525022,
+    "userId": 1757472181925,
+    "type": "health_alert",
+    "title": "Animal Health Alert - cow",
+    "message": "Scan detected treatable condition (85% confidence). Issues: Emaciation, poor body condition",
+    "priority": "medium",
+    "timestamp": "2025-09-12T17:52:05.022Z",
     "read": false
   }
 ]

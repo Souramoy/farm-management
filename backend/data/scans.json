@@ -119,5 +119,480 @@
     "notes": "",
     "timestamp": "2025-09-11T05:17:56.610Z",
     "reviewed": false
+  },
+  {
+    "id": 1757694103568,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "healthy",
+    "confidence": 0.7049000560826644,
+    "imagePath": "D:\\PROJECTS\\project\\backend\\uploads\\general\\1757694103446-790840098.jpg",
+    "notes": "",
+    "timestamp": "2025-09-12T16:21:43.568Z",
+    "reviewed": false
+  },
+  {
+    "id": 1757695217611,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "healthy",
+    "confidence": 0.6599689639203713,
+    "imagePath": "D:\\PROJECTS\\project\\backend\\uploads\\general\\1757695217591-195987988.jpg",
+    "notes": "",
+    "timestamp": "2025-09-12T16:40:17.611Z",
+    "reviewed": false
+  },
+  {
+    "id": 1757695807115,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "treatable",
+    "confidence": 0.88,
+    "imagePath": "D:\\PROJECTS\\project\\backend\\uploads\\general\\1757695805734-491447939.jpg",
+    "notes": "",
+    "timestamp": "2025-09-12T16:50:07.115Z",
+    "reviewed": false
+  },
+  {
+    "id": 1757696549596,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "healthy",
+    "confidence": 0.7345136117458304,
+    "imagePath": "D:\\PROJECTS\\project\\backend\\uploads\\general\\1757696549587-980209414.jpg",
+    "notes": "",
+    "timestamp": "2025-09-12T17:02:29.596Z",
+    "reviewed": false,
+    "animalType": "unknown",
+    "observations": "AI service unavailable",
+    "keyIssues": [
+      "Service unavailable"
+    ],
+    "recommendations": {
+      "treatable": true,
+      "message": "Please try again later when the AI service is available",
+      "monitoring_advice": "Manual inspection recommended"
+    }
+  },
+  {
+    "id": 1757696765129,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "healthy",
+    "confidence": 0.7357156098083313,
+    "imagePath": "D:\\PROJECTS\\project\\backend\\uploads\\general\\1757696765123-975404965.jpg",
+    "notes": "",
+    "timestamp": "2025-09-12T17:06:05.129Z",
+    "reviewed": false,
+    "animalType": "unknown",
+    "observations": "AI service unavailable",
+    "keyIssues": [
+      "Service unavailable"
+    ],
+    "recommendations": {
+      "treatable": true,
+      "message": "Please try again later when the AI service is available",
+      "monitoring_advice": "Manual inspection recommended"
+    }
+  },
+  {
+    "id": 1757696769759,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "treatable",
+    "confidence": 0.7371708412009649,
+    "imagePath": "D:\\PROJECTS\\project\\backend\\uploads\\general\\1757696769756-22090597.jpg",
+    "notes": "",
+    "timestamp": "2025-09-12T17:06:09.759Z",
+    "reviewed": false,
+    "animalType": "unknown",
+    "observations": "AI service unavailable",
+    "keyIssues": [
+      "Service unavailable"
+    ],
+    "recommendations": {
+      "treatable": true,
+      "message": "Please try again later when the AI service is available",
+      "monitoring_advice": "Manual inspection recommended"
+    }
+  },
+  {
+    "id": 1757696771142,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "untreatable",
+    "confidence": 0.7490630400138538,
+    "imagePath": "D:\\PROJECTS\\project\\backend\\uploads\\general\\1757696771139-211922434.jpg",
+    "notes": "",
+    "timestamp": "2025-09-12T17:06:11.142Z",
+    "reviewed": false,
+    "animalType": "unknown",
+    "observations": "AI service unavailable",
+    "keyIssues": [
+      "Service unavailable"
+    ],
+    "recommendations": {
+      "treatable": true,
+      "message": "Please try again later when the AI service is available",
+      "monitoring_advice": "Manual inspection recommended"
+    }
+  },
+  {
+    "id": 1757696775733,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "treatable",
+    "confidence": 0.851273576975532,
+    "imagePath": "D:\\PROJECTS\\project\\backend\\uploads\\general\\1757696775730-51015346.jpg",
+    "notes": "",
+    "timestamp": "2025-09-12T17:06:15.733Z",
+    "reviewed": false,
+    "animalType": "unknown",
+    "observations": "AI service unavailable",
+    "keyIssues": [
+      "Service unavailable"
+    ],
+    "recommendations": {
+      "treatable": true,
+      "message": "Please try again later when the AI service is available",
+      "monitoring_advice": "Manual inspection recommended"
+    }
+  },
+  {
+    "id": 1757697327992,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "treatable",
+    "confidence": 0.7998107548442228,
+    "imagePath": "D:\\PROJECTS\\project\\backend\\uploads\\general\\1757697327977-183855054.jpg",
+    "notes": "",
+    "timestamp": "2025-09-12T17:15:27.992Z",
+    "reviewed": false,
+    "animalType": "unknown",
+    "observations": "AI service unavailable",
+    "keyIssues": [
+      "Service unavailable"
+    ],
+    "recommendations": {
+      "treatable": true,
+      "message": "Please try again later when the AI service is available",
+      "monitoring_advice": "Manual inspection recommended"
+    }
+  },
+  {
+    "id": 1757697694659,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "healthy",
+    "confidence": 0.7954980232618343,
+    "imagePath": "D:\\PROJECTS\\project\\backend\\uploads\\general\\1757697694642-759682514.jpg",
+    "notes": "",
+    "timestamp": "2025-09-12T17:21:34.659Z",
+    "reviewed": false,
+    "animalType": "unknown",
+    "observations": "AI service unavailable",
+    "keyIssues": [
+      "Service unavailable"
+    ],
+    "recommendations": {
+      "treatable": true,
+      "message": "Please try again later when the AI service is available",
+      "monitoring_advice": "Manual inspection recommended"
+    }
+  },
+  {
+    "id": 1757697728074,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "healthy",
+    "confidence": 0.9422775173252773,
+    "imagePath": "D:\\PROJECTS\\project\\backend\\uploads\\general\\1757697728069-127547781.jpg",
+    "notes": "",
+    "timestamp": "2025-09-12T17:22:08.074Z",
+    "reviewed": false,
+    "animalType": "unknown",
+    "observations": "AI service unavailable",
+    "keyIssues": [
+      "Service unavailable"
+    ],
+    "recommendations": {
+      "treatable": true,
+      "message": "Please try again later when the AI service is available",
+      "monitoring_advice": "Manual inspection recommended"
+    }
+  },
+  {
+    "id": 1757697729040,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "healthy",
+    "confidence": 0.7330035365650016,
+    "imagePath": "D:\\PROJECTS\\project\\backend\\uploads\\general\\1757697729033-242305019.jpg",
+    "notes": "",
+    "timestamp": "2025-09-12T17:22:09.040Z",
+    "reviewed": false,
+    "animalType": "unknown",
+    "observations": "AI service unavailable",
+    "keyIssues": [
+      "Service unavailable"
+    ],
+    "recommendations": {
+      "treatable": true,
+      "message": "Please try again later when the AI service is available",
+      "monitoring_advice": "Manual inspection recommended"
+    }
+  },
+  {
+    "id": 1757697733237,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "untreatable",
+    "confidence": 0.9500254400374635,
+    "imagePath": "D:\\PROJECTS\\project\\backend\\uploads\\general\\1757697733232-588523386.jpg",
+    "notes": "",
+    "timestamp": "2025-09-12T17:22:13.237Z",
+    "reviewed": false,
+    "animalType": "unknown",
+    "observations": "AI service unavailable",
+    "keyIssues": [
+      "Service unavailable"
+    ],
+    "recommendations": {
+      "treatable": true,
+      "message": "Please try again later when the AI service is available",
+      "monitoring_advice": "Manual inspection recommended"
+    }
+  },
+  {
+    "id": 1757697735482,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "untreatable",
+    "confidence": 0.9093985503384928,
+    "imagePath": "D:\\PROJECTS\\project\\backend\\uploads\\general\\1757697735477-816161723.jpg",
+    "notes": "",
+    "timestamp": "2025-09-12T17:22:15.482Z",
+    "reviewed": false,
+    "animalType": "unknown",
+    "observations": "AI service unavailable",
+    "keyIssues": [
+      "Service unavailable"
+    ],
+    "recommendations": {
+      "treatable": true,
+      "message": "Please try again later when the AI service is available",
+      "monitoring_advice": "Manual inspection recommended"
+    }
+  },
+  {
+    "id": 1757697818834,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "untreatable",
+    "confidence": 0.9501596786227123,
+    "imagePath": "D:\\PROJECTS\\project\\backend\\uploads\\general\\1757697818830-694552364.jpg",
+    "notes": "",
+    "timestamp": "2025-09-12T17:23:38.834Z",
+    "reviewed": false,
+    "animalType": "unknown",
+    "observations": "AI service unavailable",
+    "keyIssues": [
+      "Service unavailable"
+    ],
+    "recommendations": {
+      "treatable": true,
+      "message": "Please try again later when the AI service is available",
+      "monitoring_advice": "Manual inspection recommended"
+    }
+  },
+  {
+    "id": 1757698897154,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "treatable",
+    "confidence": 0.75,
+    "imagePath": "D:\\PROJECTS\\project\\backend\\uploads\\general\\1757698892734-247159895.jpg",
+    "notes": "",
+    "timestamp": "2025-09-12T17:41:37.154Z",
+    "reviewed": false,
+    "animalType": "chicken",
+    "observations": "The chicken is standing, suggesting mobility, and appears to be responsive, indicating signs of life. However, the feathers are ruffled and appear unkempt. There appears to be some missing feathers. Also, the bird seems slightly underweight. The comb is bright red and appears normal. It is hard to observe the bird's eye, nose, and mouth area well.",
+    "keyIssues": [
+      "feather loss",
+      "possible underweight"
+    ],
+    "recommendations": {
+      "emergency": false,
+      "immediate_actions": [
+        "Isolate the animal",
+        "Keep comfortable and stress-free",
+        "Provide fresh water",
+        "Contact veterinarian immediately"
+      ],
+      "message": "Professional veterinary consultation required",
+      "treatable": false
+    }
+  },
+  {
+    "id": 1757698968665,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "treatable",
+    "confidence": 0,
+    "imagePath": "D:\\PROJECTS\\project\\backend\\uploads\\general\\1757698964684-325227932.jpg",
+    "notes": "",
+    "timestamp": "2025-09-12T17:42:48.665Z",
+    "reviewed": false,
+    "animalType": "cow",
+    "observations": "",
+    "keyIssues": [],
+    "recommendations": {
+      "emergency": false,
+      "immediate_actions": [
+        "Isolate the animal",
+        "Keep comfortable and stress-free",
+        "Provide fresh water",
+        "Contact veterinarian immediately"
+      ],
+      "message": "Professional veterinary consultation required",
+      "treatable": false
+    }
+  },
+  {
+    "id": 1757699071848,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "treatable",
+    "confidence": 0,
+    "imagePath": "D:\\PROJECTS\\project\\backend\\uploads\\general\\1757699067971-277055880.jpg",
+    "notes": "",
+    "timestamp": "2025-09-12T17:44:31.848Z",
+    "reviewed": false,
+    "animalType": "cow",
+    "observations": "",
+    "keyIssues": [],
+    "recommendations": {
+      "emergency": false,
+      "immediate_actions": [
+        "Isolate the animal",
+        "Keep comfortable and stress-free",
+        "Provide fresh water",
+        "Contact veterinarian immediately"
+      ],
+      "message": "Professional veterinary consultation required",
+      "treatable": false
+    }
+  },
+  {
+    "id": 1757699250481,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "treatable",
+    "confidence": 0,
+    "imagePath": "D:\\PROJECTS\\project\\backend\\uploads\\general\\1757699246258-463891076.jpg",
+    "notes": "",
+    "timestamp": "2025-09-12T17:47:30.481Z",
+    "reviewed": false,
+    "animalType": "cow",
+    "observations": "",
+    "keyIssues": [],
+    "recommendations": {
+      "emergency": false,
+      "immediate_actions": [
+        "Isolate the animal",
+        "Keep comfortable and stress-free",
+        "Provide fresh water",
+        "Contact veterinarian immediately"
+      ],
+      "message": "Professional veterinary consultation required",
+      "treatable": false
+    }
+  },
+  {
+    "id": 1757699283784,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "untreatable",
+    "confidence": 1,
+    "imagePath": "D:\\PROJECTS\\project\\backend\\uploads\\general\\1757699277905-120991490.jpg",
+    "notes": "",
+    "timestamp": "2025-09-12T17:48:03.784Z",
+    "reviewed": false,
+    "animalType": "pig",
+    "observations": "The pig is lying on the ground with a large amount of blood around its head and neck, indicating a severe injury. There is no visible breathing or movement. The eyes are not responsive.",
+    "keyIssues": [
+      "fatal injury"
+    ],
+    "recommendations": {
+      "emergency": true,
+      "immediate_actions": [
+        "Isolate the area immediately",
+        "Contact veterinary authorities",
+        "Dispose of carcass properly",
+        "Sanitize the environment"
+      ],
+      "message": "Deceased animal - emergency protocol required",
+      "prevention": "Investigate cause to prevent spread to other animals",
+      "treatable": false
+    }
+  },
+  {
+    "id": 1757699427485,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "untreatable",
+    "confidence": 0.95,
+    "imagePath": "D:\\PROJECTS\\project\\backend\\uploads\\general\\1757699423645-64878282.jpg",
+    "notes": "",
+    "timestamp": "2025-09-12T17:50:27.485Z",
+    "reviewed": false,
+    "animalType": "chicken",
+    "observations": "The chicken is lying on its side and appears unable to stand. The legs are splayed outwards. Feathers are sparse and ruffled, especially along the back, revealing the skin. The skin appears pale and potentially inflamed in the areas lacking feathers. The overall appearance suggests weakness and possible emaciation, although it's difficult to assess the body condition definitively. The head is tilted slightly, which can suggest neurological issues. I can't determine from the picture if there is breathing, eye response or discharge.",
+    "keyIssues": [
+      "inability to stand",
+      "feather loss",
+      "possible skin inflammation",
+      "weakness/emaciation",
+      "possible neurological issue"
+    ],
+    "recommendations": {
+      "emergency": true,
+      "immediate_actions": [
+        "Isolate the animal",
+        "Keep comfortable and stress-free",
+        "Provide fresh water",
+        "Contact veterinarian immediately"
+      ],
+      "message": "Professional veterinary consultation required",
+      "treatable": false
+    }
+  },
+  {
+    "id": 1757699525019,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "treatable",
+    "confidence": 0.85,
+    "imagePath": "D:\\PROJECTS\\project\\backend\\uploads\\general\\1757699521158-406175186.jpg",
+    "notes": "",
+    "timestamp": "2025-09-12T17:52:05.019Z",
+    "reviewed": false,
+    "animalType": "cow",
+    "observations": "The cow appears to be standing and eating, suggesting it's alive and has some mobility. However, it is visibly thin/emaciated with prominent ribs and hip bones. The skin appears relatively clean, but the overall body condition is poor. The posture is somewhat hunched. There is no obvious nasal or ocular discharge visible in the image.",
+    "keyIssues": [
+      "Emaciation",
+      "poor body condition"
+    ],
+    "recommendations": {
+      "emergency": false,
+      "immediate_actions": [
+        "Isolate the animal",
+        "Keep comfortable and stress-free",
+        "Provide fresh water",
+        "Contact veterinarian immediately"
+      ],
+      "message": "Professional veterinary consultation required",
+      "treatable": false
+    }
   }
 ]
