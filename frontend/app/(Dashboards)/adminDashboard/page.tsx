@@ -48,7 +48,7 @@ const AdminPanel: React.FC = () => {
         totalUsers: 5, // Mock data
         totalScans: scansRes.data.length,
         pendingCompliance: complianceRes.data.filter(
-          (item: any) => item.status === "pending"
+          (item: { status: string }) => item.status === "pending"
         ).length,
         systemHealth: "good",
       });
@@ -138,7 +138,7 @@ const AdminPanel: React.FC = () => {
             {tabs.map((tab) => (
               <button
                 key={tab.key}
-                onClick={() => setActiveTab(tab.key as any)}
+                onClick={() => setActiveTab(tab.key as typeof activeTab)}
                 className={`flex-1 flex items-center justify-center space-x-2 py-2 px-4 rounded-lg transition-all ${
                   activeTab === tab.key
                     ? "bg-indigo-500/20 text-indigo-300 border border-indigo-400/50"

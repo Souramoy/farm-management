@@ -48,5 +48,15 @@
     "priority": "medium",
     "timestamp": "2025-09-10T07:53:06.619Z",
     "read": false
+  },
+  {
+    "id": 1757567876611,
+    "userId": 1757472181925,
+    "type": "health_alert",
+    "title": "Animal Health Alert - treatable",
+    "message": "Scan detected treatable condition (61% confidence)",
+    "priority": "medium",
+    "timestamp": "2025-09-11T05:17:56.611Z",
+    "read": false
   }
 ]

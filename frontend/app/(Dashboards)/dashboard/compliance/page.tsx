@@ -101,11 +101,15 @@ const Compliance: React.FC = () => {
       setSelectedFile(null);
       setShowForm(false);
       loadCompliance();
-    } catch (error: any) {
+    } catch (error: unknown) {
+      let errorMessage = "Failed to upload document";
+      if (axios.isAxiosError(error) && error.response?.data?.error) {
+        errorMessage = error.response.data.error;
+      }
       addNotification({
         type: "error",
         title: "Upload failed",
-        message: error.response?.data?.error || "Failed to upload document",
+        message: errorMessage,
       });
     } finally {
       setIsUploading(false);

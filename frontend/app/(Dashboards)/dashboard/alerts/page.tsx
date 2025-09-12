@@ -199,7 +199,9 @@ const Alerts: React.FC = () => {
               ].map((filterOption) => (
                 <button
                   key={filterOption.key}
-                  onClick={() => setFilter(filterOption.key as any)}
+                  onClick={() =>
+                    setFilter(filterOption.key as "all" | "unread" | "high")
+                  }
                   className={`px-3 py-1 rounded-lg text-sm transition-colors ${
                     filter === filterOption.key
                       ? "bg-blue-500/20 text-blue-300 border border-blue-400/50"

@@ -1,13 +1,13 @@
-"use client"
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+"use client";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { useAuth } from "@/contexts/AuthContext";
 import { useNotification } from "@/contexts/NotificationContext";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link"
+import Link from "next/link";
 
 export function SignUpForm({
   className,
@@ -15,8 +15,8 @@ export function SignUpForm({
 }: React.ComponentProps<"form">) {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
-  const [farmName,setFarmName] = useState("");
-  const [role,setRole] = useState("");
+  const [farmName, setFarmName] = useState("");
+  const [role, setRole] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { register } = useAuth();
@@ -33,31 +33,34 @@ export function SignUpForm({
       const registerData = { username, password, email, farmName, role };
       await register(registerData);
       addNotification({
-        type: 'success',
-        title: 'Welcome !!!',
-        message: 'Successfully Signed in'
+        type: "success",
+        title: "Welcome !!!",
+        message: "Successfully Signed in",
       });
       // Redirect to dashboard after successful login
-      if(role==='admin'){
-        router.push('/adminDashboard');
+      if (role === "admin") {
+        router.push("/adminDashboard");
+      } else if (role === "vet") {
+        router.push("/vetDashboard");
+      } else {
+        router.push("/dashboard");
       }
-      else if(role==='vet'){
-        router.push('/vetDashboard');
-      }else {
-        router.push('/dashboard');
-      }
-    } catch (error: any) {
+    } catch (error: unknown) {
       addNotification({
-        type: 'error',
-        title: 'Login failed',
-        message: error.message || 'Invalid credentials'
+        type: "error",
+        title: "Login failed",
+        message: (error as Error).message || "Invalid credentials",
       });
     } finally {
       setIsLoading(false);
     }
   };
   return (
-    <form className={cn("flex flex-col gap-6", className)} onSubmit={handleSubmit} {...props}>
+    <form
+      className={cn("flex flex-col gap-6", className)}
+      onSubmit={handleSubmit}
+      {...props}
+    >
       <div className="flex flex-col items-center gap-2 text-center">
         <h1 className="text-2xl font-bold">Sign up to your account</h1>
         <p className="text-muted-foreground text-sm text-balance">
@@ -67,51 +70,53 @@ export function SignUpForm({
       <div className="grid gap-6">
         <div className="grid gap-3">
           <Label htmlFor="username">Username</Label>
-          <Input 
-            id="username" 
-            type="text" 
-            placeholder="John Doe" 
+          <Input
+            id="username"
+            type="text"
+            placeholder="John Doe"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            required 
+            required
           />
         </div>
         <div className="grid gap-3">
           <Label htmlFor="email">Email</Label>
-          <Input 
-            id="email" 
-            type="email" 
-            placeholder="john@example.com" 
+          <Input
+            id="email"
+            type="email"
+            placeholder="john@example.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            required 
+            required
           />
         </div>
         <div className="grid gap-3">
           <Label htmlFor="farmName">Farm Name</Label>
-          <Input 
-            id="farmName" 
-            type="text" 
-            placeholder="My Farm" 
+          <Input
+            id="farmName"
+            type="text"
+            placeholder="My Farm"
             value={farmName}
             onChange={(e) => setFarmName(e.target.value)}
-            required 
+            required
           />
         </div>
         <div className="grid gap-3">
-                  <Label htmlFor="role">Role</Label>
-                  <select 
-                    id="role" 
-                    value={role}
-                    onChange={(e) => setRole(e.target.value)}
-                    className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-                    required
-                  >
-                    <option value="" disabled>Select a role</option>
-                    <option value="admin">Admin</option>
-                    <option value="vet">Vet</option>
-                    <option value="farmer">Farmer</option>
-                  </select>
+          <Label htmlFor="role">Role</Label>
+          <select
+            id="role"
+            value={role}
+            onChange={(e) => setRole(e.target.value)}
+            className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+            required
+          >
+            <option value="" disabled>
+              Select a role
+            </option>
+            <option value="admin">Admin</option>
+            <option value="vet">Vet</option>
+            <option value="farmer">Farmer</option>
+          </select>
         </div>
 
         <div className="grid gap-3">
@@ -124,16 +129,16 @@ export function SignUpForm({
               Forgot your password?
             </a> */}
           </div>
-          <Input 
-            id="password" 
-            type="password" 
+          <Input
+            id="password"
+            type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required 
+            required
           />
         </div>
         <Button type="submit" className="w-full" disabled={isLoading}>
-          {isLoading ? 'Signing in...' : 'Signin'}
+          {isLoading ? "Signing in..." : "Signin"}
         </Button>
         {/* <div className="after:border-border relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t">
           <span className="bg-background text-muted-foreground relative z-10 px-2">
@@ -157,5 +162,5 @@ export function SignUpForm({
         </Link>
       </div>
     </form>
-  )
+  );
 }

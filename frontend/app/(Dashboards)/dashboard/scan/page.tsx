@@ -132,12 +132,12 @@ const Scan: React.FC = () => {
           response.data.confidence * 100
         )}% confidence)`,
       });
-    } catch (error: any) {
-      console.error("Scan failed:", error);
+    } catch (err: unknown) {
+      console.error("Scan failed:", err);
       addNotification({
         type: "error",
         title: "Scan failed",
-        message: error.response?.data?.error || "Please try again",
+        message: "Please try again",
       });
     } finally {
       setIsScanning(false);

@@ -21,7 +21,12 @@ interface DashboardStats {
   healthyScans: number;
   alertsCount: number;
   pendingCompliance: number;
-  recentScans: any[];
+  recentScans: Array<{
+    id?: string | number;
+    result: "healthy" | "treatable" | "critical" | string;
+    timestamp: string | number | Date;
+    confidence?: number;
+  }>;
 }
 
 const Dashboard: React.FC = () => {

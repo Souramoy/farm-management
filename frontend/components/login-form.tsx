@@ -35,11 +35,11 @@ export function LoginForm({
       });
       // Redirect to dashboard after successful login
       router.push("/dashboard");
-    } catch (error: any) {
+    } catch (error: unknown) {
       addNotification({
         type: "error",
         title: "Login failed",
-        message: error.message || "Invalid credentials",
+        message: (error as Error).message || "Invalid credentials",
       });
     } finally {
       setIsLoading(false);

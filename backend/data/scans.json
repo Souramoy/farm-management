@@ -108,5 +108,16 @@
     "notes": "",
     "timestamp": "2025-09-10T07:53:35.079Z",
     "reviewed": false
+  },
+  {
+    "id": 1757567876610,
+    "userId": 1757472181925,
+    "animalId": null,
+    "result": "treatable",
+    "confidence": 0.6075100687182793,
+    "imagePath": "/home/god/VS_CODE/SouramoySIH/farm-management/backend/uploads/general/1757567876562-955834257.jpg",
+    "notes": "",
+    "timestamp": "2025-09-11T05:17:56.610Z",
+    "reviewed": false
   }
 ]
